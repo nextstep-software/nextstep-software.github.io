@@ -1,8 +1,59 @@
 ---
-import Home from "../components/pages/Home.astro";
-import Layout from "../layouts/Layout.astro";
+// TO RESTORE: Uncomment the imports below and remove the custom 404 HTML
+// import Home from "../components/pages/Home.astro";
+// import Layout from "../layouts/Layout.astro";
 ---
 
+{/* TO RESTORE: Replace everything below with this:
 <Layout>
   <Home />
 </Layout>
+*/}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>404 - Page Not Found</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        background: #151824;
+        color: white;
+        font-family: sans-serif;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+      }
+      .number {
+        font-size: clamp(100px, 18vw, 160px);
+        font-weight: bold;
+        color: #C9A646;
+        line-height: 1;
+      }
+      .title {
+        font-size: 28px;
+        font-weight: 500;
+        margin-top: 2rem;
+      }
+      .message {
+        font-size: 16px;
+        color: rgba(255,255,255,0.7);
+        margin-top: 1.5rem;
+        max-width: 420px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="number">404</div>
+      <div class="title">Page Not Found</div>
+      <p class="message">Sorry, we couldn't find the page you're looking for. The page may have been moved or doesn't exist.</p>
+    </div>
+  </body>
+</html>
